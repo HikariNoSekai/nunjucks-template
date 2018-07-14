@@ -1,0 +1,38 @@
+{
+    "name": "project",
+    "version": "1.0.0",
+    "description": "Nunjucks template",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "Igor Stasiuk",
+    "license": "ISC",
+    "devDependencies": {
+        "babel-core": "^6.26.3",
+        "babel-preset-env": "^1.7.0",
+        "babel-preset-es2015": "^6.24.1",
+        "babelify": "^8.0.0",
+        "browser-sync": "^2.24.5",
+        "gulp": "^3.9.1",
+        "gulp-autoprefixer": "^5.0.0",
+        "gulp-browserify": "^0.5.1",
+        "gulp-csso": "^3.0.1",
+        "gulp-imagemin": "^4.1.0",
+        "gulp-nunjucks-render": "^2.2.2",
+        "gulp-postcss": "^7.0.1",
+        "gulp-plumber": "^1.2.0",
+        "gulp-rename": "^1.3.0",
+        "gulp-sourcemaps": "^2.6.4",
+        "gulp-uglify": "^3.0.0",
+        "gulp-watch": "^5.0.0",
+        "postcss-apply": "^0.10.0",
+        "postcss-cssnext": "^3.1.0",
+        "postcss-csso": "^3.0.0",
+        "postcss-import": "^11.1.0",
+        "postcss-mixins": "^6.2.0",
+        "postcss-short": "^4.1.0",
+        "precss": "^3.1.2"
+    }
+}

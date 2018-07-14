@@ -1,0 +1,80 @@
+:root {
+	--large-container: 1200px;
+}
+
+@custom-media --small (width >= 601px);
+@custom-media --medium (width >= 768px);
+@custom-media --medlg (width >= 1081px);
+@custom-media --large (width >= 1200px);
+@custom-media --exlarge (width >= 1444px);
+
+
+@define-mixin fontSize $count {
+	font-size: calc($count / 16)rem;
+	line-height: calc( ($count + 2) / 16)rem;
+}
+
+@define-mixin remLh $count {
+	line-height: calc($count / 16)rem;
+}
+
+@define-mixin container {
+	width: var(--large-container);
+	margin: 0 auto;
+	padding: 0 15px;
+
+	@media (--large) {
+		width: 1024px;
+	}
+
+	@media (--medium) {
+		width: 771px;
+	}
+
+	@media (--small) {
+		width: 100%;
+	}
+}
+
+@define-mixin poscenter {
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+@define-mixin center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+ }
+
+@define-mixin placeholder $color, $size: 14px {
+	&::-webkit-input-placeholder {
+		opacity: 1;
+		font-family: $calibri;
+		text-transform: uppercase;
+		color: $color;
+		font-size: $size;
+	}
+	&:-moz-placeholder {
+		opacity: 1;
+		text-transform: uppercase;
+		font-family: $calibri;
+		color: $color;
+		font-size: $size;
+	}
+	&::-moz-placeholder {
+		opacity: 1;
+		text-transform: uppercase;
+		font-family: $calibri;
+		color: $color;
+		font-size: $size;
+	}
+	&:-ms-input-placeholder {
+		opacity: 1;
+		text-transform: uppercase;
+		font-family: $calibri;
+		color: $color;
+		font-size: $size;
+	}
+}
