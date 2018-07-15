@@ -6,13 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="style/main.min.css">
   <title>
-    {% block title %}{% endblock %}
+    {{ title }}
   </title>
 </head>
 <body>
-  {% block header %}{% endblock %}
+  {% include "components/header/header.html" ignore missing %}
   {% block content %}{% endblock %}
-  {% block footer %}{% endblock %}
+  {% include "components/footer/footer.html" ignore missing %}
 
   <script src="js/main.min.js"></script>
 </body>
