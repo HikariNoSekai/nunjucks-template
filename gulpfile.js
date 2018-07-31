@@ -1,8 +1,9 @@
 'use strict';
 
 const gulp = require('gulp');
-const csso = require('gulp-csso');
 const postcss = require('gulp-postcss');
+const nested = require('postcss-nested');
+const simpleVars = require('postcss-simple-vars');
 const atImport = require("postcss-import");
 const csso = require('postcss-csso');
 const precss = require('precss');
@@ -22,12 +23,14 @@ const plumber = require('gulp-plumber');
 
 gulp.task('css', function() {
     let processors = [
-        mixins,
         precss,
         atImport,
         cssnext,
         short,
-        csso
+        csso,
+        mixins,
+        nested,
+        simpleVars,
     ];
     return gulp.src('src/assets/main.css')
         .pipe(plumber())
